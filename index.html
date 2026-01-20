@@ -4,14 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- المعلومات الأساسية -->
     <title>كوزمتك بين يديك - جمالك في مكان واحد</title>
-    <meta name="description" content="كوزمتك بين يديك - علامتك الرائدة في مستحضرات التجميل والعناية الشخصية.">
-    <meta name="theme-color" content="#6200EE">
+    <meta name="description" content="كوزمتك بين يديك - علامتك الرائدة في مستحضرات التجميل والعناية الشخصية المختارة بعناية من أفضل الماركات العالمية.">
+    <meta name="keywords" content="مستحضرات تجميل, عناية شخصية, تجميل, جمال, كوزمتك, عراق">
+    <meta name="author" content="كوزمتك بين يديك">
+    
+    <!-- Open Graph Meta Tags (للفيسبوك ووسائل التواصل الاجتماعي) -->
+    <meta property="og:title" content="كوزمتك بين يديك - جمالك في مكان واحد">
+    <meta property="og:description" content="علامتك الرائدة في مستحضرات التجميل والعناية الشخصية المختارة بعناية">
+    <meta property="og:image" content="https://cosmeticinhand.github.io/cosmetic_beatuy/thumbnail.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="كوزمتك بين يديك - جمالك في مكان واحد">
+    <meta property="og:url" content="https://cosmeticinhand.github.io/cosmetic_beatuy/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="كوزمتك بين يديك">
+    <meta property="og:locale" content="ar_IQ">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="كوزمتك بين يديك - جمالك في مكان واحد">
+    <meta name="twitter:description" content="علامتك الرائدة في مستحضرات التجميل والعناية الشخصية">
+    <meta name="twitter:image" content="https://cosmeticinhand.github.io/cosmetic_beatuy/thumbnail.jpg">
+    <meta name="twitter:image:alt" content="كوزمتك بين يديك - جمالك في مكان واحد">
+    <meta name="twitter:site" content="@cosmetic_inhand">
+    <meta name="twitter:creator" content="@cosmetic_inhand">
+    
+    <!-- أيقونة الموقع (Favicon) -->
+    <link rel="icon" type="image/x-icon" href="https://cosmeticinhand.github.io/cosmetic_beatuy/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cosmeticinhand.github.io/cosmetic_beatuy/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cosmeticinhand.github.io/cosmetic_beatuy/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cosmeticinhand.github.io/cosmetic_beatuy/apple-touch-icon.png">
+    <link rel="manifest" href="https://cosmeticinhand.github.io/cosmetic_beatuy/site.webmanifest">
+    
+    <!-- ألوان المتصفح -->
+    <meta name="theme-color" content="#9c27b0">
+    <meta name="msapplication-TileColor" content="#9c27b0">
+    <meta name="msapplication-navbutton-color" content="#9c27b0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#9c27b0">
+    
+    <!-- الروابط الخارجية -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        /* إضافة أنماط مؤقتة للعناصر الجديدة حتى يتم تحميل CSS */
+        /* أنماط الصورة المصغرة في قسم الهيرو */
+        .hero-image {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(156, 39, 176, 0.3);
+            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8e8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .floating-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 2;
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-image {
+                max-width: 400px;
+                height: 300px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                max-width: 320px;
+                height: 250px;
+                margin-top: 30px;
+            }
+            
+            .floating-badge {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* باقي الأنماط تبقى كما هي */
         .featured-badge {
             position: absolute;
             top: 15px;
@@ -261,7 +374,7 @@
 
     <!-- المحتوى الرئيسي -->
     <main>
-        <!-- قسم الهيرو (Hero) -->
+        <!-- قسم الهيرو (Hero) مع الصورة -->
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
@@ -280,6 +393,10 @@
                     </div>
                 </div>
                 <div class="hero-image">
+                    <!-- الصورة المصغرة للموقع -->
+                    <img src="https://cosmeticinhand.github.io/cosmetic_beatuy/thumbnail.jpg" 
+                         alt="كوزمتك بين يديك - جمالك في مكان واحد"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/9c27b0/ffffff?text=%D9%83%D9%88%D8%B2%D9%85%D8%AA%D9%83+%D8%A8%D9%8A%D9%86+%D9%8A%D8%AF%D9%8A%D9%83'">
                     <div class="floating-badge">
                         <i class="fas fa-star"></i>
                         <span>منتجات مميزة</span>
